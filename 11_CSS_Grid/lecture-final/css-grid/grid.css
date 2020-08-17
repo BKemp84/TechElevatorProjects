@@ -1,0 +1,87 @@
+
+#grid-example {
+    width: 75%;
+    height: 50%;
+    background-color: gray;
+    margin: auto;
+    top: 50px;
+    position: relative;
+}
+
+.box {
+    background-color: darkgrey;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    border: 1px solid black;
+}
+
+.one {
+    background-color: red;
+}
+
+.two {
+    background-color: green;
+}
+
+.three {
+    background-color: blue;
+}
+
+.item {
+    padding: 5px;
+    margin: 10px;
+}
+
+div.container {
+    display: grid;
+    grid-template-columns: 4fr 1fr 2fr;
+    grid-template-areas:
+        "header header header"
+        "main . sidebar"
+        "footer footer copyright";
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    padding: 10px;
+}
+
+div.item-a {
+    grid-area: header;
+}
+
+div.item-b {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "main-text main-text main-text"
+        "main-one main-two main-three";
+}
+div.item-b > p {
+    grid-area: main-text;
+    text-align: center;
+}
+div.one {
+    grid-area: main-one;
+}
+
+div.two {
+    grid-area: main-two;
+}
+
+div.three {
+    grid-area: main-three;
+}
+
+
+div.item-c {
+    grid-area: sidebar;
+}
+
+div.item-d {
+    grid-area: footer;
+}
+
+div.item-e {
+    grid-area: copyright;
+}
