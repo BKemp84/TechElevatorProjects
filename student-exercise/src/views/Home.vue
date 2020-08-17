@@ -1,30 +1,17 @@
 <template>
-<div class="books">
-    <best-seller-list/>
-    <new-releases-list/>
-
-</div>
+  <div class="home">
+    <h1>Topic Message Board</h1>
+    <topic-list />
+  </div>
 </template>
 
 <script>
-
-import BestSellerList from "@/components/BestSellerList.vue"
-import NewReleasesList from "@/components/NewReleasesList.vue"
+import TopicList from '@/components/TopicList.vue';
 
 export default {
-props: ["book"],
-name: 'books',
-
-    components : {
-     BestSellerList,
-     NewReleasesList
-
-    },
-   
-
+  name: 'Home',
+  components: {
+    TopicList
+  }
 }
 </script>
-
-<style>
-
-</style>

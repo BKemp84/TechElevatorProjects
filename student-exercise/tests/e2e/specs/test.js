@@ -1,72 +1,37 @@
 // https://docs.cypress.io/api/introduction/api.html
 
-describe('Routing Exercise', () => {
-
-  describe('Step One Tests', () => {
-    it('should show the best sellers at /', () => {
+describe('Web API (GET) Exercises', () => {
+  describe('Step Three Tests', () => {
+    it('should show topics on /', () => {
       cy.visit('/');
-      cy.get('.best-seller-list');
+      cy.get('.topic').should('have.length', 20);
     });
+    it('should properly show topic titles', () => {
+        cy.visit('/');
+        cy.contains('luctus et');
+    });
+  });
 
-    it('should show the new releases at /', () => {
+  describe('Step Four Tests', () => {
+    it('should link topic to details', () => {
       cy.visit('/');
-      cy.get('.new-releases-list');
+      cy.contains('a[href$="/13"]', "luctus et");
     });
-  });
-
-  describe('Step Two Tests', () => {
-    it('should show the reading list at /myBooks', () => {
-      cy.visit('/myBooks');
-      cy.get('.book-container');
+    it('should show details on detail page', () => {
+      cy.visit('/13');
+      cy.contains('h1', 'luctus et');
+      cy.contains('h3.message-title', 'mauris eget');
+      cy.contains('.message-body', 'tortor duis');
+      cy.contains('h3.message-title', 'nibh fusce');
+      cy.contains('.message-body', 'libero convallis');
+      cy.contains('h3.message-title', 'neque libero');
+      cy.contains('.message-body', 'ipsum dolor sit amet');
+      cy.contains('h3.message-title', 'tempus vel pede');
+      cy.contains('.message-body', 'eget eros elementum');
     });
-  });
-
-  describe("Step Three Tests", () => {
-    it('should have navigation in the App component for home', () => {
-      cy.visit('/');
-      cy.get('a[href$="/"]');
-    });
-    it('should have navigation in the App component for my books', () => {
-      cy.visit('/');
-      cy.get('a[href$="/myBooks"');
-    });
-  });
-
-  describe("Step Four Tests", () => {
-    it('should show the new book form at /addBook', () => {
-      cy.visit('/addBook');
-      cy.get('.new-book-form');
-    });
-  });
-
-  describe("Step Five Tests", () => {
-    it('should show a link to /addBook on the My Books page', () => {
-      cy.visit('/myBooks');
-      cy.get('a[href$="/addBook"]');
-    });
-    it('should go back to myBooks when a new book is submitted', () => {
-      cy.visit('/addBook');
-      cy.get('.title-input').type('TEST');
-      cy.get('.author-input').type('TEST');
-      cy.get('.isbn-input').type('1111111111');
-      cy.get('.new-book-form button').click();
-
-      cy.url().should('include', '/myBooks');
-    });
-  });
-
-  describe("Step Six Tests", () => {
-    it('should show book details when loading book page', () => {
-      cy.visit('/book/9781400079278');
-      cy.contains('Kafka by the Shore');
-      cy.contains('Haruki Murakami');
-    });
-    it('should link to book page from reading list cards', () => {
-      cy.visit('/myBooks');
-      cy.get('a[href$="/book/9781400079278"]');
-      cy.get('a[href$="/book/9780356500157"]');
-      cy.get('a[href$="/book/9780684830490"]');
-      cy.get('a[href$="/book/9783125971400"]');
+    it('should show all messages in a topic', () => {
+      cy.visit('/17');
+      cy.get('h3.message-title').should('have.length', 4);
     });
   });
 });
