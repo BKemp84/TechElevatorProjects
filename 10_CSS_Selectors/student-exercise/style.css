@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: rgba(192, 192, 192, 0.1);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+aside{
+
+  position: fixed;
+  width: 200px;
+  border-right: 1px solid rgba(0,173, 238, 0.4) ;
+  height :100vh;
+  padding-left : 20px;
+  padding-right : 20px;
+  
+}
+body aside  > img {
+  height: 120px;
+  display: block;
+  margin: 0 auto;
+}
+
+main{
+  margin-left : 200px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+body aside nav ul > li {
+list-style: none;
+text-align: center;
+text-transform: uppercase;
+border-bottom: 1px solid  rgba(0,173, 238, 0.4);
+margin: 10px auto;
+padding-bottom: 10px;
+width: 80%;
+}
+a {
+  font-weight: bold;
+
+  color:  #00ADEE ;
+  text-decoration: none;
+}
+
+ a:hover{
+   text-decoration: underline;
+ }
+ header > img{
+   height: 80%;
+
+ }
+
+ main > img{
+   display: block;
+   width: 100%;
+ }
+
+   section > div#what-we-do {
+   display: inline-block;
+   width: 33%;
+   padding-right: 20px;
+   margin-top: 20px;
+
+ }
+ section > div#our-work {
+  display: inline-block;
+  width: 33%;
+  padding-right: 20px;
+  margin-top: 20px;
+
+}
+section > div#contact-us {
+  display: inline-block;
+  width: 33%;
+  padding-right: 20px;
+  margin-top: 20px;
+
+}
+div#what-we-do > h2{
+  color: #8CC36F;
+  
+}div#our-work > h2{
+  color: #8CC36F;
+  
+}
+div#contact-us > h2{
+  color: #8CC36F;
+  
+}
+div h2 > i {
+  margin-right: 10px;
+}
+section > div#what-we-do{
+  border-right: 1px solid rgba(170, 239, 135, 0.8);
+}
+section > div#our-work{
+  border-right: 1px solid rgba(170, 239, 135, 0.8);
+  
+  padding-left: 20px;
+
+}section > div#contact-us{
+  
+  padding-left: 20px;
+  
+}
+
+

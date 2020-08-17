@@ -1,0 +1,50 @@
+
+div {
+    background-color: red;
+}
+* {
+    background-color: green;
+}
+
+#idExample {
+    background-color: gray;
+}
+#idExample {
+    background-color: purple;
+}
+.descendentOne {
+    background-color: orange;
+}
+.descendentOne {
+    background-color: yellow;
+}
+
+
+
+
+div {
+    border-style: solid;
+    margin: 10px;
+    padding: 15px;
+}
+
+span {
+    border-style: dotted;
+    margin: 10px;
+    padding: 10px;
+}
+
+div:hover {
+    background-color: blue;
+}
+
+#siblingtest {
+    background-color: purple;
+}
+
+.spanOne + span {
+    background-color: blue;
+}
+
+
+

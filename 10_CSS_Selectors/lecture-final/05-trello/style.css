@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    /* Define the root font size.  rem will be relative to this size */
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+
+    background-image: linear-gradient(to bottom, #858c90, #bbb);
+    /* Stetch the background instead of repeating */
+    background-repeat: no-repeat;
+
+    /* Do not scroll */
+    background-attachment: fixed;
+
+    /* don't wrap elements - force horizontal scrolling */
+    white-space: nowrap;
+}
+
+div.trello-list {
+
+    /* create multi-column layout */
+    display: inline-block;
+    
+    /* fix the column width */
+    width: 300px;
+
+    background-color: #ddd;
+
+    /* Round the corners */
+    border-radius: 2px 3px;
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+div.trello-list h2 {
+    margin: 8px;
+
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+div.trello-list ol {
+    /* Remove margin/padding so it can be applied to
+    the line items */
+    margin: 0;
+    padding: 0;
+}
+
+div.trello-list li {
+    /* remove numbers */
+    list-style: none;
+
+    background-color: rgb(255, 255, 255);
+
+    font-size: 0.9rem;
+
+    border-radius: 1px;
+
+    margin-bottom: 10px;
+    padding: 8px;
+
+    /* Wrap the text on the li */
+    white-space: normal;
+}
+
+div.trello-list li:hover {
+    background-color: lightsalmon;
+    color: lightgray;
+}
+
+div.trello-list li:last-child {
+    margin-bottom: 0px;
+}
+
+div.trello-list a {
+    display: block;
+    text-decoration: none;
+    color: #888;
+
+    padding: 8px 0px 8px 5px;  /* top right bottom left */
+}
+
+
+div.trello-list a:hover {
+    background-color: rgba(9, 45, 66, 0.1);
+}
+
+main {
+    margin-top: 50px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    height: 50px;
+}
+
+header > h1,
+header > p {
+    display: inline-block;
+
+    height: 20px;
+
+    padding-right: 20px;
+    vertical-align: middle;
+
+    color: rgba(255,255,255, 0.8);
+
+    border-right: 1px solid rgba(255,255,255,0.5);
+}
+
+header > h1 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+header > p {
+    font-size: 0.9rem;
+    padding-left: 5px;
+}
+
+div.labels span {
+    width: 35px;
+    height: 8px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 3px;
+}
+
+.label.general {
+    background-color: orange;
+}
+
+.label.pathway {
+    background-color: red;
+}
+
+.label.pair {
+    background-color: teal;
+}
+
+.label.individual {
+    background-color: green;
+}
+
+/* Change the Scrollbar */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: #bbb;
+}
+body::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background: purple;
+}
