@@ -1,0 +1,14 @@
+package com.techelevator.farm;
+
+public class Dog extends FarmAnimal {
+
+	public Dog() {
+		super("Dog", "Bark!");
+	}
+
+	@Override
+	public String eat() {
+		return "crunch";
+	}
+
+}
